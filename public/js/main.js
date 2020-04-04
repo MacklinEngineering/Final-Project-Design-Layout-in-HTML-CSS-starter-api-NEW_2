@@ -6,14 +6,20 @@ postItemButton.addEventListener("click", function(){
   // console.log("sending from the post item button to the database")
   const email = document.getElementById("email").value
   const itemTitle = document.getElementById("job-title").value
+  const itemLocation = document.getElementById("job-location").value
+  const itemDescription = document.getElementById("editor-1").innerHTML
     console.log(email)
     console.log(itemTitle)
+    console.log(itemLocation)
+    console.log(itemDescription)
   fetch('listings', {
     method: 'post',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
       'Email': email,
       'ItemTitle': itemTitle,
+      'ItemLocation': itemLocation,
+      'ItemDescription' : itemDescription
     })
   })
 

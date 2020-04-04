@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,700");
 
+
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
@@ -404,9 +405,35 @@
   .sticky-wrapper .shrink {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
-#bodyIndexPage{
+#bodyIndexPage, #bodySignupPage, #bodyLoginPage {
   /* background-image: url("/public/images/hero_1.jpg"); */
-  background-color: red;
+  background-image: url("https://images.pexels.com/photos/325521/pexels-photo-325521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: 1000px 500px;
+  background-position: top;
+  /* background-repeat: no-repeat; */
+  font-family: 'Advent Pro', sans-serif;
+}
+
+#indexH1{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+#indexH1{
+  margin-top: 170px;
+  margin-bottom: 0px;
+}
+.btn-default{
+/* margin-left: 30px; */
+text-decoration: none;
+margin-right: 30px;
+color: white;
+
+}
+
+#indexLeftbutton{
+  margin-left: 400px;
 }
 body {
   font-weight: 400;

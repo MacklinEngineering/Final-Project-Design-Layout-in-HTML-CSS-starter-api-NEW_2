@@ -6,9 +6,36 @@ module.exports = function (app, passport, db) {
   app.get('/', function (req, res) {
     res.render('index.ejs');
   });
+  app.get('/index', function (req, res) {
+    res.render('index.ejs');
+  });
 
   app.get('/post-job', function (req, res) {
     res.render('post-job.ejs');
+  })
+
+  app.get('/contact', function (req, res) {
+    res.render('contact.ejs');
+  })
+
+  app.get('/about', function (req, res) {
+    res.render('about.ejs');
+  })
+
+  app.get('/job-listings', function (req, res) {
+    res.render('job-listings.ejs');
+  })
+
+  app.get('/job-single', function (req, res) {
+    res.render('job-single.ejs');
+  })
+
+  app.get('/services', function (req, res) {
+    res.render('services.ejs');
+  })
+
+  app.get('/testimonials', function (req, res) {
+    res.render('testimonials.ejs');
   })
   //     app.get('/', function (req, res){
   //         res.render('about.ejs')
@@ -48,7 +75,8 @@ module.exports = function (app, passport, db) {
 
   app.post('/listings', (req, res) => {
     
-    db.collection('Listings').save({ email: req.body.Email, itemTitle: req.body.ItemTitle}, (err, result) => { 
+    db.collection('Listings').save({ email: req.body.Email, 
+      itemTitle: req.body.ItemTitle, itemlocation: req.body.ItemLocation, itemdescription: req.body.ItemDescription}, (err, result) => { 
           if (err) return res.send(err)
           res.send(result)
     })
